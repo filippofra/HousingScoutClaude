@@ -1,17 +1,13 @@
 {
   "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "projectSettings": {
-    "rootDirectory": ".",
-    "outputDirectory": "dist",
-    "nodeVersion": "18.x"
-  },
-  "rewrites": [
+  "outputDirectory": "dist",
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
